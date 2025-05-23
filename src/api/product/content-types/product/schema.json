@@ -1,0 +1,109 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "products",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "product_name": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "product_price": {
+      "type": "decimal"
+    },
+    "small_desc": {
+      "type": "text"
+    },
+    "product_quantity": {
+      "type": "integer"
+    },
+    "product_availability": {
+      "type": "string"
+    },
+    "product_rating": {
+      "type": "integer",
+      "max": 5,
+      "min": 0
+    },
+    "discount_value": {
+      "type": "integer",
+      "min": 0,
+      "max": 100,
+      "default": 0
+    },
+    "final_price": {
+      "type": "decimal"
+    },
+    "product_volume": {
+      "type": "string"
+    },
+    "isNew": {
+      "type": "boolean",
+      "default": false
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "sub_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sub-category.sub-category",
+      "inversedBy": "products"
+    },
+    "long_desc": {
+      "type": "text"
+    },
+    "sizes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.size-option"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "hasDiscount": {
+      "type": "boolean",
+      "default": false
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "product"
+    },
+    "desc": {
+      "type": "richtext"
+    },
+    "isWeeklyDeal": {
+      "type": "boolean"
+    }
+  }
+}

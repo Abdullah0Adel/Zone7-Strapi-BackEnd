@@ -1,0 +1,7 @@
+# .gitignore
+node_modules/
+.cache/
+build/
+.env
+.env.*.local
+public/uploads/

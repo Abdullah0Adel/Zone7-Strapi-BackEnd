@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_product_size_options",
+  "info": {
+    "displayName": "SizeOption",
+    "icon": "",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "s37",
+        "s38",
+        "s39",
+        "s40",
+        "s41",
+        "s42",
+        "s43",
+        "s44",
+        "s45"
+      ]
+    },
+    "stock": {
+      "type": "integer"
+    }
+  }
+}

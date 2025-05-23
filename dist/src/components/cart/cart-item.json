@@ -1,0 +1,34 @@
+{
+    "collectionName": "components_cart_cart_items",
+    "info": {
+        "displayName": "cart-item",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "Product_id": {
+            "type": "integer"
+        },
+        "product_name": {
+            "type": "string"
+        },
+        "size_id": {
+            "type": "integer"
+        },
+        "size_name": {
+            "type": "string"
+        },
+        "quantity": {
+            "type": "integer"
+        },
+        "price": {
+            "type": "decimal"
+        },
+        "image_URL": {
+            "type": "string"
+        },
+        "max_stock": {
+            "type": "string"
+        }
+    }
+}

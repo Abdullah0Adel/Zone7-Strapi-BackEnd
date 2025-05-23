@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wishlists",
+  "info": {
+    "singularName": "wishlist",
+    "pluralName": "wishlists",
+    "displayName": "wishlist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "wishlists"
+    },
+    "product_id": {
+      "type": "integer"
+    },
+    "product_name": {
+      "type": "string"
+    },
+    "product_price": {
+      "type": "decimal"
+    },
+    "product_rating": {
+      "default": 0,
+      "max": 5,
+      "required": false,
+      "type": "integer"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "product_documentId": {
+      "type": "string"
+    }
+  }
+}
