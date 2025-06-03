@@ -4,4 +4,4 @@ node_modules/
 build/
 .env
 .env.*.local
-public/uploads/
+# public/uploads/
